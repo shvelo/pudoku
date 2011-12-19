@@ -1,4 +1,4 @@
-# Pudoku: sudoku web interface written in python
+# Pudoku: A sudoku web interface written in python
 
 ## With using :
 
