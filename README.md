@@ -15,4 +15,4 @@ $ python pudoku.py --port 789
 
 ## License
 
-See [LICENSE.md](/tree/master/LICENSE.md) file
+See [LICENSE.md](https://github.com/s1n4/pudoku/tree/master/LICENSE.md) file
