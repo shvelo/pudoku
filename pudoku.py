@@ -56,8 +56,9 @@ class Pudoku(BaseHTTPRequestHandler) :
 
 	#Generate the template
 	def template(self, Type='text/html', title='Pudoku', body=None) :
-		self.content = file('layouts/main.html').read().replace('<!-- title -->', title)
-		self.content = self.content.replace('<!-- content -->', body)
+		self.content = file('layouts/main.html').read()
+		self.content = self.content % {'title' : title,
+					       'content': body}
 		self.sendResponse(Type)
 
 
