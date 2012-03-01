@@ -8,7 +8,12 @@
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 from optparse import OptionParser
 from sudokulib import sudoku
-import cgi, mimetypes, os, platform, sys, time, webbrowser
+import mimetypes
+import os
+import platform
+import sys
+import time
+# import webbrowser
 
 class Pudoku(BaseHTTPRequestHandler) :
 
@@ -38,11 +43,11 @@ class Pudoku(BaseHTTPRequestHandler) :
 
             if inputs == self.solution :
                 self.template(title='Win',
-                          body='<h2>Congratulations!</h2><center><p>You won the game!</p></center>')
+                              body='<h2>Congratulations!</h2><center><p>You won the game!</p></center>')
 
             else :
                 self.template(title='Lose',
-                          body='<h2>Sorry!</h2><center><p>You haven\'t been able to win the game</p></center>')
+                              body='<h2>Sorry!</h2><center><p>You haven\'t been able to win the game</p></center>')
 
         else :
             try :
@@ -58,7 +63,7 @@ class Pudoku(BaseHTTPRequestHandler) :
     def template(self, Type='text/html', title='Pudoku', body=None) :
         self.content = file('layouts/main.html').read()
         self.content = self.content % {'title' : title,
-                           'content': body}
+                                       'content': body}
         self.sendResponse(Type)
 
 
@@ -96,7 +101,7 @@ class Pudoku(BaseHTTPRequestHandler) :
             c += 1
 
         ku.append('|\n<br /> %s <br />' % ('-' * 90))
-               ku.append('\n<br /><br />\n<input type="submit" value="Submit" /></form></center>')
+        ku.append('\n<br /><br />\n<input type="submit" value="Submit" /></form></center>')
         Pudoku.pudoku = ' '.join(ku)
         Pudoku.solution = pu.solution
         return self.pudoku
@@ -104,14 +109,14 @@ class Pudoku(BaseHTTPRequestHandler) :
 
 def main() :
     parser = OptionParser(description='Pudoku is a sudoku web interface', 
-                  version='Pudoku 1.0')
+                          version='Pudoku 1.0')
     parser.add_option('--host', type='str', default='localhost', 
-              help='\tHost to import from')
+                      help='\tHost to import from')
     parser.add_option('--port', type='int', default=5000,
-              help='\tPort to import from')
+                      help='\tPort to import from')
 
     help_context = {'--version' : '\tDisplay current version',
-            '--help'    : '\tDisplay this help message and exit'}
+                    '--help' : '\tDisplay this help message and exit'}
 
     #A simple hack
     for counter in xrange(len(parser.option_list)) :
