@@ -95,8 +95,8 @@ class Pudoku(BaseHTTPRequestHandler) :
                 ku.append('|')
 
             ku.append('<input align="top" type="text" %s value="%s" ' \
-                       'name="pudo" maxlength="1" style="width:25px" />\n' \
-                            % ('readonly="readonly"' if n else '', n))
+                          'name="pudo" maxlength="1" style="width:25px" />\n' \
+                          % ('readonly="readonly"' if n else '', n))
 
             c += 1
 
@@ -111,9 +111,9 @@ def main() :
     parser = OptionParser(description='Pudoku is a sudoku web interface', 
                           version='Pudoku 1.0')
     parser.add_option('--host', type='str', default='localhost', 
-                      help='\tHost to import from')
+                      help='\tHost to bind')
     parser.add_option('--port', type='int', default=5000,
-                      help='\tPort to import from')
+                      help='\tPort to bind')
 
     help_context = {'--version' : '\tDisplay current version',
                     '--help' : '\tDisplay this help message and exit'}
