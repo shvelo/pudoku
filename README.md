@@ -1,9 +1,11 @@
-# Pudoku: A sudoku web interface written in python
+# Pudoku
 
-## With using :
+A sudoku web interface written in python
 
-* [sudokulib](http://pypi.python.org/pypi/sudokulib)
-* [Twitter bootstrap](https://github.com/Twitter/bootstrap)
+
+## Requirement
+
+python 2.x
 
 
 ## How to use
@@ -11,6 +13,7 @@
 ```bash
 $ python pudoku.py
 $ python pudoku.py --port 789
+$ python pudoku.py --host 0.0.0.0 --port 4567
 ```
 
 ## License
