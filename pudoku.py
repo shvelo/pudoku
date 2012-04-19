@@ -109,7 +109,7 @@ class Pudoku(BaseHTTPRequestHandler) :
 
 def main() :
     parser = OptionParser(description='Pudoku is a sudoku web interface', 
-                          version='Pudoku 1.0')
+                          version='Pudoku 1.0.3')
     parser.add_option('--host', type='str', default='localhost', 
                       help='\tHost to bind')
     parser.add_option('--port', type='int', default=5000,
