@@ -1,12 +1,13 @@
 # Pudoku
 
-A sudoku web interface written in python
+A web interface sudoku
 
 
-## Requirement
+## Requirements
 
-python 2.x
+* Python 2.6+
 
+* [Flask](https://github.com/mitsuhiko/flask)
 
 ## How to use
 
@@ -18,4 +19,4 @@ $ python pudoku.py --host 0.0.0.0 --port 4567
 
 ## License
 
-See [LICENSE.md](https://github.com/s1n4/pudoku/tree/master/LICENSE.md) file
+[The BSD 3-Clause License](https://github.com/s1n4/pudoku/tree/master/LICENSE.md)

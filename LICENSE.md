@@ -1,6 +1,6 @@
 (The BSD 3-Clause License)
 
-<p>Copyright (c) 2011, Sina Samavati <br />
+<p>Copyright (c) 2012, Sina Samavati <br />
   All rights reserved.</p>
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
