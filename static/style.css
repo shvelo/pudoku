@@ -16,14 +16,14 @@ footer {
     background-color: #222;
     color: #DDD;
     height: 120px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
 }
 
 footer p, footer p iframe {
-    text-align: center;    
+    text-align: center;
 }
 
 footer p iframe {
@@ -33,6 +33,7 @@ footer p iframe {
 
 .container {
     width: 670px;
+    height: 630px;
 }
 
 .container .content {
@@ -45,4 +46,13 @@ footer p iframe {
     -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
     box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+.pudoku {
+    text-align: center;
+}
+
+.pudoku input[type=text] {
+    width: 20px;
+    text-align: center;
 }

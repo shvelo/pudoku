@@ -15,28 +15,28 @@ app = Flask(__name__)
 def pudo(difficulty=0):
     pu = sudoku.Sudoku(difficulty=difficulty)
     do = [str(e) for e in pu.masked_grid]
-    ku = ['<center><form action="result" method="POST">\n']
+    ku = ['<div class="pudoku"><form action="result" method="POST">\n']
     l = [i*27 for i in xrange(4)]
     c = 0
 
     for n in do:
 
         if c in l:
-            ku.append('%s\n<br /> %s <br />\n' % ('|' if c != 0 else '', '-' * 90))
+            ku.append('%s\n<br /> +%s+ <br />\n' % ('|' if c != 0 else '', '-' * 80))
 
         if c % 9 == 0 and c not in l:
             ku.append('|\n<br />\n')
-            
+
         if c % 3 == 0:
             ku.append('|')
 
-        ku.append('<input align="top" type="text" %s value="%s" name="%s" maxlength="1" style="width:25px" />\n' \
+        ku.append('<input align="top" type="text" %s value="%s" name="%s" maxlength="1" />\n' \
                       % ('readonly="readonly"' if n else '', n, str(c)))
 
         c += 1
 
-    ku.append('|\n<br /> %s <br />' % ('-' * 90))
-    ku.append('\n<br /><br />\n<input class="btn primary" type="submit" value="Submit" name="submit" /></form></center>')
+    ku.append('|\n<br /> +%s+ <br />' % ('-' * 80))
+    ku.append('\n<br /><br />\n<input class="btn primary" type="submit" value="Submit" name="submit" /></form></div>')
     pudoku = ' '.join(ku)
     global solution
     solution = pu.solution
