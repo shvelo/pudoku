@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>%(title)s</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/bootstrap.css">
+    <link rel="stylesheet" href="static/style.css">
     <style type="text/css">
     </style>
   </head>
@@ -13,7 +13,20 @@
     <div class="container">
       <h1><a href="/">Pudoku</a>, A web interface sudoku</h1>
       <div class="content">
-	%(content)s
+	<div class="media-grid">
+  <a href="/easy" title="Easy">
+    <img class="thumbnail easy normal" src="static/easy.png">
+	<img class="thumbnail hard hover" src="static/easy-h.png">
+  </a>
+  <a href="/medium" title="Medium">
+    <img class="thumbnail medium normal" src="static/medium.png">
+	<img class="thumbnail hard hover" src="static/medium-h.png">
+  </a>
+  <a href="/hard" title="Hard">
+    <img class="thumbnail hard normal" src="static/hard.png">
+	<img class="thumbnail hard hover" src="static/hard-h.png">
+  </a>
+</div>
       </div>
     </div>
 
@@ -29,7 +42,7 @@
 		allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
 	<br>
 	<br>
-	Â© 2012 <b>Sina Samavati</b>
+	© 2012 <b>Sina Samavati</b>
       </p>
     </footer>
 
