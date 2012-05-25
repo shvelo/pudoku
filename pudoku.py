@@ -22,21 +22,21 @@ def pudo(difficulty=0):
     for n in do:
 
         if c in l:
-            ku.append('%s\n<br /> +%s+ <br />\n' % ('|' if c != 0 else '', '-' * 80))
+            ku.append('%s\n<br> +%s+ <br>\n' % ('|' if c != 0 else '', '-' * 80))
 
         if c % 9 == 0 and c not in l:
-            ku.append('|\n<br />\n')
+            ku.append('|\n<br>\n')
 
         if c % 3 == 0:
             ku.append('|')
 
-        ku.append('<input align="top" type="text" %s value="%s" name="%s" maxlength="1" />\n' \
+        ku.append('<input align="top" type="text" %s value="%s" name="%s" maxlength="1">\n' \
                       % ('readonly="readonly"' if n else '', n, str(c)))
 
         c += 1
 
-    ku.append('|\n<br /> +%s+ <br />' % ('-' * 80))
-    ku.append('\n<br /><br />\n<input class="btn primary" type="submit" value="Submit" name="submit" /></form></div>')
+    ku.append('|\n<br> +%s+ <br />' % ('-' * 80))
+    ku.append('\n<br><br>\n<input class="btn primary" type="submit" value="Submit" name="submit"></form></div>')
     pudoku = ' '.join(ku)
     global solution
     solution = pu.solution
